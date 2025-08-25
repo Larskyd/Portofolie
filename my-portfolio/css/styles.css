@@ -626,46 +626,81 @@ footer {
 }
 
 
-/* mindre desktops */
+
 @media (max-width: 1470px) {
     .innhold-container {
-        flex-direction: column;
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: center;
+        gap: 20px;
     }
-    .forside-profilbilde {
-        width: 250px;  
-        height: 250px;
-    }
-    .boks-grid {
-        grid-template-columns: 1fr;
-    }
-    .ferdigheter {
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
 
-/* Laptop / tablet */
-@media (max-width: 1024px) {
-    .innhold-container {
-        flex-direction: column; 
-    }
     .profile-box,
     .hoved-innhold {
-        width: 100%;  
-        max-width: 100%;
+        width: 48%; 
+        max-width: 600px;
+        box-sizing: border-box;
     }
+
     .boks-grid {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
     .ferdigheter {
+        grid-column: auto;
+        grid-row: auto;
         max-height: none;
         overflow: visible;
     }
 }
 
-/* Tablet / mobil */
+
+@media (min-width: 1025px) and (max-width: 1470px) {
+    .innhold-container {
+        flex-direction: row; 
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .profile-box,
+    .hoved-innhold {
+        width: 48%;
+        max-width: 600px; 
+        box-sizing: border-box;
+    }
+
+    .boks-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ferdigheter {
+        grid-column: auto;
+        grid-row: auto;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+
+/* Laptop */
+@media (max-width: 1024px) {
+    .innhold-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-box,
+    .hoved-innhold {
+        width: 100%;
+        max-width: 900px;
+    }
+}
+
+/* Tablet */
 @media (max-width: 768px) {
     .forside {
         width: 100%;
@@ -673,42 +708,49 @@ footer {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
         justify-content: center; 
         text-align: center;
     }
+
     .forside-innhold {
         flex-direction: column;  
         gap: 20px;
         align-items: center;
     }
+
     .forside-profilbilde {
         width: 220px;  
         height: 220px;
     }
+
     .innhold-container {
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
+
     .profile-box,
     .hoved-innhold {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
     }
+
     .boks-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
         justify-items: center; 
     }
+
     .ferdigheter {
         grid-column: auto;  
         grid-row: auto;
         max-height: none; 
         overflow: visible;
     }
+
     .timeline {
         flex-direction: column;
         gap: 20px;
@@ -724,6 +766,7 @@ footer {
         background: white;
         text-align: left;
     }
+
     .skill-item {
         flex-direction: column;
         width: 100%;
@@ -738,6 +781,7 @@ footer {
         width: 45px;  
         height: 45px;
     }
+
     .kontakt-info,
     footer {
         width: 100%;
@@ -745,6 +789,7 @@ footer {
         box-sizing: border-box;
         text-align: center;
     }
+
     .boks-grid section p {
         font-size: 0.95rem; 
         line-height: 1.5;
@@ -758,39 +803,51 @@ footer {
         width: 100%;
         padding: 15px;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        text-align: center;
     }
+
     .forside-innhold {
         flex-direction: column;  
         gap: 15px;
         align-items: center;
     }
+
     .forside-profilbilde {
         width: 140px;  
         height: 140px;
     }
+
     .innhold-container {
         flex-direction: column;
         gap: 15px;
         align-items: center; 
     }
+
     .profile-box,
     .hoved-innhold {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
     }
+
     .boks-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
         justify-items: center; 
     }
+
     .ferdigheter {
         grid-column: auto;  
         grid-row: auto;
         max-height: none; 
         overflow: visible;
     }
+
     .timeline {
         flex-direction: column;
         gap: 15px;
@@ -806,6 +863,7 @@ footer {
         background: white;
         text-align: center; 
     }
+
     .skill-item {
         flex-direction: column;
         width: 100%;
@@ -820,6 +878,7 @@ footer {
         width: 35px;  
         height: 35px;
     }
+
     .kontakt-info,
     footer {
         width: 100%;
@@ -827,14 +886,20 @@ footer {
         box-sizing: border-box;
         text-align: center;
     }
+
     .boks-grid section p {
         font-size: 0.85rem; 
         line-height: 1.4;
         text-align: center;
     }
+
+    footer p {
+        font-size: 0.9rem;
+        color: #cbd5e0;
+    }
 }
 
-/* Footer generelt */
+
 footer p {
     font-size: 0.9rem;
     color: #cbd5e0;
