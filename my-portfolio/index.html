@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Portefølje</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Forside -->
+
+    <section class="forside">
+        
+    <div class="forside-innhold">
+        <div class="forside-profilbilde">
+            <img src="Pictures\Headshot.jpg" alt="Profilbilde av Lars Kydland">
+        </div>
+            <div class="forside-tekst">
+                <h1>Lars Kydland</h1>
+                <p class="undertekst">Bachelor Student <br> IT og informasjonssytemer</p>
+                <img class="uia-logo" src="Pictures\uia-icon.png" alt="UiA Logo">
+            </div>
+        </div>
+    
+        <div class="scroll-indikator" onclick="document.querySelector('.innhold-container').scrollIntoView()">
+        <div class="scroll-pil"></div>
+        </div>
+    </section>
+
+ 
+    <section class="portfolio-section"></section>
+    <!-- Header -->
+    
+    <header>
+        <h1></h1>
+    </header>
+    <div class="innhold-container">
+        <!-- Venstre side -->
+        <div class="profile-box">
+            <div class="profile-bilde">
+                <img src="Pictures\Headshot.jpg" alt="Profilbilde av Lars Kydland">
+            </div>
+                <h1>Lars Kydland</h1>
+                <p>Bachelor Student</p>
+                <section class="kontakt-info p">
+                
+                <h2>Kontakt</h2>
+                <p><img src="Pictures\mail-icon.png" alt="Email" class="kontakt-icon"> larskydland02@gmail.com</p>
+                <p><img src="Pictures\location-icon-svart.png" alt="lokasjon" class="kontakt-icon">Kristiansand, Norge</p>
+                
+            <div class="social-icons">
+                <a href="https://github.com/Larskyd" target="_blank"> 
+            <div class="github-btn">
+                 <img src="Pictures\Github-icon-tekst.png" alt="GitHub">
+            </div>
+                 </a>
+                 <a href="https://www.linkedin.com/in/lars-kydland-aa930135a/" target="_blank">
+            <div class="linkedin-btn">
+                <img src="Pictures\LinkedIn-icon-text.png" alt="LinkedIn">
+            </div>
+    </a>
+</div>
+            </section>
+        </div>
+    
+        <div class="hoved-innhold" id="panel">
+            <main id="panel">
+                <div class="boks-grid">
+                    <section class="om-meg">
+                        <h2>Om meg</h2>
+                        <p>Jeg er en 23 år gammel IT-student med sterk interesse for systemutvikling og IT-struktur. Gjennom studiene mine har jeg opparbeidet solid teoretisk kunnskap, samtidig som jeg er nysgjerrig og motivert for å ta i bruk nye teknologier for å løse praktiske utfordringer. Jeg trives med å kombinere analytisk tenkning og kreativ problemløsning, og liker å se hvordan teknologi kan bidra til mer effektive og brukervennlige løsninger.</p>
+                    </section>
+
+                        <section class="prosjekter-innhold">
+                        <h2>Prosjekter</h2>
+                        <p>Semester prosjekt Kartverket <br>Portfolio</p>
+                    </section>
+                    
+                    <section class="ferdigheter">
+                    <h2>Ferdigheter</h2>
+    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                        <img src="Pictures\html icon.png" alt="HTML logo">
+                     </div>
+                    <div class="skill-content">
+                        <h3>HTML</h3>
+                        <p>IS-200 <br> IS-114</p>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-logo">
+                    <img src="Pictures\CSS icon.png" alt="CSS logo">
+                </div>
+                <div class="skill-content">
+                    <h3>CSS</h3>
+                    <p>IS-200</p>
+                </div>
+                </div>
+
+                <div class="skill-item">
+                     <div class="skill-logo">
+                     <img src="Pictures\python icon.png" alt="Python Logo">
+                 </div>
+                <div class="skill-content">
+                     <h3>Python</h3>
+                    <p>IS-211</p>
+                </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-logo">
+                    <img src="Pictures\java-icon.png" alt="JAVA logo">
+                </div>
+                <div class="skill-content">
+                    <h3>JAVA</h3>
+                    <p>IS-110</p>
+                </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-logo">
+                    <img src="Pictures\SQL-icon.png" alt="SQL logo">
+                </div>
+                <div class="skill-content">
+                    <h3>SQL</h3>
+                    <p>IS-201</p>
+                </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-logo">
+                    <img src="Pictures\GIT-ICON.png" alt="GIT logo">
+                </div>
+                <div class="skill-content">
+                    <h3>GIT</h3>
+                    <p>IS-114</p>
+                </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-logo">
+                    <img src="Pictures\DotNet-icon.png" alt=".DotNet logo">
+                </div>
+                <div class="skill-content">
+                    <h3>DotNet</h3>
+                    <p>IS-202</p>
+                </div>
+                </div>
+                    </section>
+                    <section id="tidlinje" class="tidlinje-boks">
+                     <h2>Min reise</h2>
+                         <div class="timeline">
+                         <div class="timeline-item" data-text="Startet bachelor i IT og informasjonssystemer ved UiA.">
+                            <span class="year">2023</span>
+                        </div>
+                         <div class="timeline-item small"data-text="Sommerjobb hos Obs Bygg"> 
+                            <span class="year">Sommer</span>
+                         </div>
+                        <div class="timeline-item" data-text="Startet 2 året i It og informasjonssystemer ved UIA">
+                            <span class="year">2024</span> 
+                        </div>
+                        <div class="timeline-item small" data-text="Sommerjobb hos Obs Bygg">
+                            <span class="year">Sommer
+                            </span>
+                         </div>
+                        <div class="timeline-item" data-text="Startet 3 året i it og informasjonssystemer ved UIA">
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                </section>
+
+                </div>
+            </main>
+        </div>
+    </div>
+     <footer>
+        <p>&copy; 2025</p>
+    </footer>
+</body>
+</html>
