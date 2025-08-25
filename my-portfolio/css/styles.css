@@ -626,7 +626,7 @@ footer {
 }
 
 
-
+/* Desktop */
 @media (max-width: 1470px) {
     .innhold-container {
         flex-direction: row; 
@@ -654,20 +654,21 @@ footer {
         overflow: visible;
     }
 }
-
-
 @media (min-width: 1025px) and (max-width: 1470px) {
     .innhold-container {
         flex-direction: row; 
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap;    
         gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        justify-content: center; 
     }
 
     .profile-box,
     .hoved-innhold {
-        width: 48%;
-        max-width: 600px; 
+        flex: 1 1 48%;
+        min-width: 300px; 
         box-sizing: border-box;
     }
 
@@ -699,6 +700,7 @@ footer {
         max-width: 900px;
     }
 }
+
 
 /* Tablet */
 @media (max-width: 768px) {
