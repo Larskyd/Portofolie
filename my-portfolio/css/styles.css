@@ -6,8 +6,10 @@
 
 /*hoved*/
 body, html {
-    height: 100%;
+    height: auto;
     scroll-behavior: smooth;
+    min-height: 100%;
+
 }
 
 body{
@@ -657,7 +659,7 @@ footer {
         max-width: none;
     }
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .boks-grid {
         grid-template-columns: 1fr; 
     }
@@ -672,7 +674,13 @@ footer {
     .timeline {
         flex-direction: column;
         gap: 20px;
+        align-items: flex-start;
     }
+
+     .timeline::before {
+    display: none;
+  }
+
     .timeline-item {
         display: flex;
         background: white;
