@@ -9,7 +9,9 @@ body, html {
     height: auto;
     scroll-behavior: smooth;
     min-height: 100%;
-
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body{
@@ -647,18 +649,15 @@ footer {
     .innhold-container {
         flex-direction: column; 
     }
-    .profile-box {
+    .profile-box,
+    .hoved-innhold {
         width: 100%;  
-        max-width: none;
+        max-width: 100%;
     }
-    .hoved-innhold{
-        width: 100%;
-    }
-    .boks-grid{
+    .boks-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap:20px;
-
+        gap: 20px;
     }
     .ferdigheter {
         max-height: none;
@@ -666,129 +665,177 @@ footer {
     }
 }
 
-
+/* Tablet / mobil */
 @media (max-width: 768px) {
-
+    .forside {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;
+    }
     .forside-innhold {
         flex-direction: column;  
-        gap: 30px;
-        text-align: center;
+        gap: 20px;
+        align-items: center;
     }
     .forside-profilbilde {
         width: 220px;  
         height: 220px;
     }
-
     .innhold-container {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
-    .profile-box {
-        width: 100%;
-        max-width: none;
-    }
+    .profile-box,
     .hoved-innhold {
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
-
     .boks-grid {
         display: grid;
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 20px;
+        justify-items: center; 
     }
-
     .ferdigheter {
         grid-column: auto;  
         grid-row: auto;
         max-height: none; 
         overflow: visible;
     }
-
     .timeline {
         flex-direction: column;
         gap: 20px;
-        align-items: flex-start;
-    }
-    .timeline::before {
-        display: none;
+        align-items: center;
     }
     .timeline-item {
-        display: flex;
         width: 100%;
+        max-width: 400px;
+        margin: 0 auto 10px auto;
         padding: 12px 12px 12px 28px;
-        border-radius: 10px;
         border-left: 4px solid #3D52A0;
+        border-radius: 10px;
         background: white;
         text-align: left;
-        margin-bottom: 10px;
     }
-    .timeline-item::before {
-        left: -10px;
-        top: 18px;
-        transform: none;
-    }
-    .timeline-item .year {
-        margin-bottom: 6px;
-    }
-
-
     .skill-item {
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
+        max-width: 400px;
         padding: 10px;
         gap: 12px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
     }
     .skill-logo {
         width: 45px;  
         height: 45px;
     }
-
+    .kontakt-info,
+    footer {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
     .boks-grid section p {
         font-size: 0.95rem; 
-        line-height: 1.5;   
+        line-height: 1.5;
+        text-align: center;
     }
 }
-
 
 /* Små mobiltelefoner */
 @media (max-width: 480px) {
+    .forside {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .forside-innhold {
+        flex-direction: column;  
+        gap: 15px;
+        align-items: center;
+    }
+    .forside-profilbilde {
+        width: 140px;  
+        height: 140px;
+    }
+    .innhold-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center; 
+    }
+    .profile-box,
+    .hoved-innhold {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .boks-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-items: center; 
+    }
+    .ferdigheter {
+        grid-column: auto;  
+        grid-row: auto;
+        max-height: none; 
+        overflow: visible;
+    }
     .timeline {
         flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
-    .timeline::before {
-        display: none;
+        gap: 15px;
+        align-items: center; 
     }
     .timeline-item {
-        display: flex;
         width: 100%;
-        padding: 10px 12px 10px 24px;
-        border-radius: 10px;
+        max-width: 320px; 
+        margin: 0 auto 8px auto;
+        padding: 10px 10px 10px 20px;
         border-left: 4px solid #3D52A0;
+        border-radius: 10px;
+        background: white;
+        text-align: center; 
     }
-    .timeline-item .year {
-        margin-bottom: 4px;
-    }
-
     .skill-item {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
         padding: 8px;
-        gap: 10px;
+        gap: 8px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
     }
     .skill-logo {
-        width: 40px;  
-        height: 40px;
+        width: 35px;  
+        height: 35px;
     }
-
+    .kontakt-info,
+    footer {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: center;
+    }
     .boks-grid section p {
-        font-size: 0.9rem; 
-        line-height: 1.6;   
+        font-size: 0.85rem; 
+        line-height: 1.4;
+        text-align: center;
     }
 }
 
-
+/* Footer generelt */
 footer p {
     font-size: 0.9rem;
     color: #cbd5e0;
 }
-
