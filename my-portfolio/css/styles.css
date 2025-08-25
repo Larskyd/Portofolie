@@ -654,34 +654,47 @@ footer {
         overflow: visible;
     }
 }
-@media (min-width: 1025px) and (max-width: 1470px) {
+
+/* Laptop / mellomstore skjermer (1024px – 1470px) */
+@media (max-width: 1470px) and (min-width: 1024px) {
     .innhold-container {
-        flex-direction: row; 
-        flex-wrap: wrap;    
-        gap: 20px;
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch; /* fyller hele bredden */
         width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-        justify-content: center; 
     }
 
-    .profile-box,
+    .profile-box {
+        width: 100%;  
+        max-width: none; /* fjernet maksbegrensning */
+    }
+
     .hoved-innhold {
-        flex: 1 1 48%;
-        min-width: 300px; 
-        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
     }
 
     .boks-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr; 
         gap: 20px;
+        width: 100%;
     }
 
     .ferdigheter {
-        grid-column: auto;
-        grid-row: auto;
         max-height: none;
         overflow: visible;
+    }
+
+    .forside {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -753,21 +766,78 @@ footer {
         overflow: visible;
     }
 
+   @media (max-width: 768px) {
     .timeline {
         flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding-left: 40px;
         gap: 20px;
-        align-items: center;
+        width: 100%;
     }
+
+    /* vertikal linje */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 4px;
+        height: 100%;
+        background: #3D52A0;
+        border-radius: 2px;
+    }
+
     .timeline-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
         max-width: 400px;
-        margin: 0 auto 10px auto;
-        padding: 12px 12px 12px 28px;
-        border-left: 4px solid #3D52A0;
-        border-radius: 10px;
         background: white;
-        text-align: left;
+        padding: 12px 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
     }
+
+    /* punkt på linjen */
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -18px;
+        top: 15px;
+        width: 16px;
+        height: 16px;
+        background: #3D52A0;
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+
+    .timeline-item:hover::before {
+        transform: none; /* fjern hover-effekt */
+        background-color: #3D52A0;
+    }
+
+    /* teksten vises alltid */
+    .timeline-item::after {
+        content: attr(data-text);
+        position: static;
+        background: none;
+        color: #2d3748;
+        padding: 0;
+        font-size: 0.95rem;
+        white-space: normal;
+        margin-top: 5px;
+    }
+
+    .timeline-item .year {
+        font-size: 1.2rem;
+        color: #3D52A0;
+        margin-bottom: 5px;
+    }
+}
+
 
     .skill-item {
         flex-direction: column;
@@ -801,103 +871,81 @@ footer {
 
 /* Små mobiltelefoner */
 @media (max-width: 480px) {
-    .forside {
-        width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center; 
-        text-align: center;
-    }
-
-    .forside-innhold {
-        flex-direction: column;  
-        gap: 15px;
-        align-items: center;
-    }
-
-    .forside-profilbilde {
-        width: 140px;  
-        height: 140px;
-    }
-
-    .innhold-container {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center; 
-    }
-
-    .profile-box,
-    .hoved-innhold {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .boks-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        justify-items: center; 
-    }
-
-    .ferdigheter {
-        grid-column: auto;  
-        grid-row: auto;
-        max-height: none; 
-        overflow: visible;
-    }
-
     .timeline {
         flex-direction: column;
-        gap: 15px;
-        align-items: center; 
-    }
-    .timeline-item {
+        align-items: flex-start;
+        position: relative;
+        padding-left: 25px;
+        gap: 20px;
         width: 100%;
-        max-width: 320px; 
-        margin: 0 auto 8px auto;
-        padding: 10px 10px 10px 20px;
-        border-left: 4px solid #3D52A0;
-        border-radius: 10px;
-        background: white;
-        text-align: center; 
     }
 
-    .skill-item {
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10px; 
+        width: 4px;
+        height: 100%;
+        background: #3D52A0;
+        border-radius: 2px;
+    }
+
+    .timeline-item {
+        position: relative;
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
         max-width: 320px;
-        padding: 8px;
-        gap: 8px;
-        margin: 0 auto;
-        align-items: center;
-        text-align: center;
-    }
-    .skill-logo {
-        width: 35px;  
-        height: 35px;
+        background: white;
+        padding: 12px 15px;
+        border-radius: 10px;
+        border-left: none; 
+        margin-bottom: 20px;
     }
 
-    .kontakt-info,
-    footer {
+    /* punkt på linjen */
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -20px; 
+        top: 12px;
+        width: 14px;
+        height: 14px;
+        background: #3D52A0;
+        border: 3px solid white;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .timeline-item .year {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .timeline-item::after {
+        content: attr(data-text);
+        position: static;
+        transform: none;
+        opacity: 1;
+        background: #3D52A0;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        margin-top: 5px;
         width: 100%;
-        padding: 15px;
+        white-space: normal;
         box-sizing: border-box;
-        text-align: center;
+        pointer-events: none;
     }
-
-    .boks-grid section p {
-        font-size: 0.85rem; 
-        line-height: 1.4;
-        text-align: center;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-        color: #cbd5e0;
+    .timeline-item:hover::before,
+    .timeline-item:hover::after {
+        transform: none;
+        opacity: 1;
+        background-color: #3D52A0;
     }
 }
 
