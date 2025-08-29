@@ -328,7 +328,7 @@ main section p {
     grid-column: 2;
     grid-row: 1/3;
     overflow: auto;
-    max-height: 525px;
+    max-height: 580px;
 }
 
 .prosjekt-liste {
@@ -544,19 +544,67 @@ footer {
     height: 40px;
     object-fit: contain;
 }
-
-.skill-content {
-    flex: 1;
+.prosjekt {
+    margin-bottom: 20px;
+}
+.prosjekter-innhold {
+    grid-column: 1;
+    grid-row: 2;
+    overflow: auto;
+    max-height: 275px;
 }
 
-.skill-content h3 {
+.prosjekt-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prosjekt-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(61, 82, 160, 0.1);
+}
+
+.prosjekt-logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prosjekt-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.prosjekt-content h3 {
     font-size: 1.2rem;
     color: #3D52A0;
     margin: 0 0 8px 0;
     font-weight: 600;
 }
 
-.skill-content p {
+.prosjekt-content a {
+    color: #3D52A0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+.prosjekt-content p {
     font-size: 0.9rem;
     color: #4a5568;
     line-height: 1.5;
