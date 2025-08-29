@@ -1,5 +1,5 @@
 
-# Lars Kydland - Portfolio
+# Lars Kydland - Portefølje
 
 En personlig portfolioside som viser frem ferdigheter, utdanning og prosjekter.
 
