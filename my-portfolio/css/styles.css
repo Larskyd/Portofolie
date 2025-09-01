@@ -419,7 +419,7 @@ main section p {
     padding: 8px 12px;
     border-radius: 6px;
     font-size: 0.9rem;
-    white-space: nowrap;
+ 
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
