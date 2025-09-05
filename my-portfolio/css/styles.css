@@ -411,7 +411,7 @@ main section p {
 .timeline-item::after {
     content: attr(data-text);
     position: absolute;
-    bottom: 55px;   /* <- hvor høyt over hover boksen vises */
+    bottom: 55px;
     left: 50%;
     transform: translateX(-50%);
     background: #3D52A0;
