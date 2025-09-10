@@ -467,7 +467,7 @@ main section p {
     text-align: center;
     display: flex;
     flex-direction: column;  
-    height: 200px; 
+    height: 250px; 
     box-sizing: border-box;
 }
 
